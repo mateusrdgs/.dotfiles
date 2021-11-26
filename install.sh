@@ -24,7 +24,7 @@ if test ! $(which brew); then
 
   HOMEBREW_PATH=$(["$(uname -p)" == "i386"] && echo "/usr/local/bin" || echo "/opt/homebrew/bin")
 
-  echo "export PATH=$HOMEBREW_PATH:$PATH" >> ~/.zshrc
+  echo "\n\nexport PATH=$HOMEBREW_PATH:$PATH" >> ~/.zshrc
 fi
 
 # update homebrew
