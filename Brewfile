@@ -6,7 +6,7 @@ brew 'curl'
 brew 'starship'
 brew 'wget'
 brew 'zsh' # in order to update it if outdated
-brew 'zsh-autocomplete'
+brew 'zsh-autosuggestions'
 
 # install casks
 cask '1password'
