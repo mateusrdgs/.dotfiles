@@ -19,6 +19,10 @@ echo "dotfiles symlinked successfully..."
 # check if homebrew is installed and install it if not
 if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+  HOMEBREW_PATH=$(["$(uname -p)" == "i386"] && echo "/usr/local/bin" || echo "/opt/homebrew/bin")
+
+  echo "export PATH=$HOMEBREW_PATH:$PATH" >> ~/.zshrc
 fi
 
 # update homebrew
